@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>符华泽</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	<script>
+		prompt("欢迎光临");
+	</script>
+	<style>
+		.A{
+			width: 300px;
+			height: 600px;
+			position: relative;    /*最外层盒子采用相对定位，因为不脱标*/
+			background-color: rgba(0, 0, 255, 0.7);
+			top: 50px;
+			left: 1050px;
+
+		}
+		.B{
+			width: 72px;
+			height: 73px;
+			position: absolute;       
+			background-size: 100%;     /*图片铺满整个盒子*/
+			background-repeat: no-repeat;      /*超过图片大小不平铺*/
+			background-image: url(AA/guilin.png);
+			position: absolute;
+			top: 105px;
+			left: 184px;
+			z-index: 2;
+			}
+		.C{
+			color: #0c32ec;
+			position: absolute;
+			left: 171px;
+			font-size: 30px;
+			z-index: 2;
+		}
+		.D{
+			color: #0c32ec;
+			position: absolute;
+			left: 172px;
+			top: 62px;
+			z-index: 2;
+		}
+		.E{
+			font-size: 32px;
+			position: absolute;
+			left: 8px;
+			top: 144px;
+			z-index: 2;
+
+		}
+		.F{
+			position: absolute;
+			left: 10px;
+			top: 283px;
+			z-index: 2;
+			font-size: 10px;
+		}
+		.zhanghao{
+			position: absolute;
+			left: 10px;
+  			top:327px;
+  			z-index: 2;
+			
+		}
+		input{
+  		border: 0;             /*  所有文本框宽度为0*/
+  		color: gray;      			/*文本提示变灰色*/
+  		border-bottom: 1px solid skyblue;      /*文本下边框为1像素、实线、灰色*/
+  		width: 217px;                   /*    文本框长217像素*/
+  		z-index: 2;
+  		}	
+  		.G{
+  			position: absolute;
+  			top: 397px;
+  			left: 10px;
+  			font-size: 2px;        /*字体设为2像素*/
+  			color: blue;			/*蓝色字体*/
+  			z-index: 2;
+  		} 
+  		.H{
+  			position: absolute;
+  			top: 420px;
+  			left: 10px;
+  			font-size: 2px;
+  			color: blue;
+  			z-index: 2;
+
+  		}
+  		p:hover{
+  			color: red;    /*鼠标经过P标签时，字体会显示红色*/
+
+  		}
+
+		.hezi1{
+			width: 383px;
+			height: 381px;
+			position: absolute;
+			background-color: white;
+			border-radius: 70px 70px 0px 0px;
+			transform: rotate(45deg);
+			top: 211px;
+			left: -143px;
+			z-index: 1;
+
+		}
+		.hezi2{
+			width: 364px;
+			height: 353px;
+			position: absolute;
+			background-color: white;
+			border-radius: 0px 0px 81px 0px;
+			transform: rotate(45deg);
+			top: -203px;
+			left: 32px;
+			z-index: 1;
+
+		}
+		#tijiao{
+			border: 0;  
+			width: 65px;
+			height: 67px;
+			position: absolute;
+			left: 200px;
+			top: 391px;
+		}
+	</style>
+</head>
+<body>
+ <div class="A">
+ 	<div class="B" title="嗨，你好！"></div>
+ 	<div class="C"><p>欢迎使用</p></div>
+ 	<div class="D"><p>桂工应用广场3.0</p></div>
+ 	<div class="E"><p>登录</p></div>
+ 	<div class="F">请输入易班/教务处账号</div>
+ 	<div class="zhanghao"><input type="text" value="请输入手机号/学号" tyle="width:100px;" /><br /><br /> 
+	<input  text="password" value="请输入密码" tyle="width:100px;" /></div>
+	<input id="tijiao" type="image" src="AA\右.png" >
+	<div class="G"><p>忘记密码</p></div>
+	<div class="H"><p>用户协议|隐私协议</p></div>        <!-- 不足：鼠标经过时，左右两行文字会一起闪 -->
+	<div class="I"></div>
+	<div class="hezi1"></div>
+	<div class="hezi2"></div>
+ </div>
+</body>
+</html>

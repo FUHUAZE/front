@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>父级盒子，额外标签法</title>
+	<style>
+		.HH{
+			width: 600px;
+			/*height: 600px;*/   /* 如果不给高度，则会自适应盒子的高度*/
+			background-color: gray;
+			overflow: hidden;     /* 这段代码会出发BFC，清楚浮动的负面作用*/
+		}
+		.AA{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			float: left;
+		}
+		.BB{width: 150px;
+			height: 500px;
+			background-color: skyblue;
+			float: left;
+		}
+		.GG{
+			width: 200px;
+			height: 300px;
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<div class="HH">
+		<div class="AA"></div>
+	<div class="BB"></div>
+	</div>
+	<div class="GG"></div>
+	
+</body>
+</html>

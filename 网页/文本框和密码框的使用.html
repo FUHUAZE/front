@@ -1,0 +1,26 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title>文本框和密码框的使用</title>
+	<style >
+		input{
+			border: 0;   默认所有的边框都为0像素。
+		}
+		.wbk{
+			border-bottom-width:  1px;
+			border-bottom-color: red;
+			border-bottom-style: solid;
+		}
+		#AA{
+			position: absolute;
+			top: 100px;
+		}
+	</style>
+</head>
+	<body>
+		<!-- text表示显示单行文本输入框，value表示在文本框内有字体 -->
+		账号：<input type="text" value="请输入用户名" class="wbk" /> <br /> 
+		密码：<input type="password" class="wbk" />   <br /> <!-- 在type输入password值时，表示输入密码不见 -->
+		<input id="AA" type="image" src="AA\AA1\anniu.png" >  <!-- 图片形式的提交按钮 -->
+	</body>
+</html>

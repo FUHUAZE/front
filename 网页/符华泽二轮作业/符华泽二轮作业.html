@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta charset="utf-8">
+    <title>信息学院易班学生工作站技术部 </title>
+    <style>
+        body {
+            width: 1000px;
+            height: 727px;
+            background-image: url(AA/biying.jpg);
+            background-repeat: no-repeat;
+        }
+        
+        .AA {
+            width: 360px;
+            height: 600px;
+            background-color: rgba(255, 255, 255);
+            border-radius: 20px 20px 20px 20px;
+            position: relative;
+            top: 80px;
+            left: 950px;
+        }
+        
+        .BB {
+            width: 331px;
+            height: 160px;
+            /*border: 1px solid red;*/
+            position: absolute;
+            background-repeat: no-repeat;
+            border-radius: 20px 20px 20px 20px;
+            background-image: url(AA/yiban.jpg);
+            background-size: 100%;
+            margin-top: 41px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        .CC {
+            width: 800px;
+            height: 50px;
+            background-color: rgba(80, 89, 238, 1);
+            border-radius: 10px 10px 10px 10px;
+            position: absolute;
+            margin-top: -609px;
+            margin-left: 600px;
+            letter-spacing: 3px;
+        }
+        
+        .DD {
+            width: 700px;
+            height: 30px;
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 110px;
+            font-size: 19px;
+        }
+        
+        .EE {
+            width: 420px;
+            height: 450px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 20px 20px 20px 20px;
+            position: absolute;
+            top: 180px;
+            left: 320px;
+            z-index: -1;
+        }
+        
+        .GG {
+            width: 500px;
+            height: 280px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 20px 20px 20px 20px;
+            position: absolute;
+            top: 254px;
+            left: 280px;
+            z-index: -2;
+        }
+        
+        #zz:hover {
+            color: red; //鼠标经过时，字体变红
+        }
+        
+        .zhanghao {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 300px;
+            left: 20px;
+        }
+        
+        input {
+            border: 0;
+            color: gray;
+            border-bottom: 1px solid gray;
+            width: 240px;
+        }
+        
+        #denglu {
+            width: 82px;
+            height: 40px;
+            background-color: #48b7e4;
+            color: #000000;
+            font-size: 18px;
+            position: absolute;
+            top: 519px;
+            left: 474px;
+            border-radius: 10px 10px 10px 10px;
+        }
+        
+        .zhuce {
+            position: absolute;
+            top: 343px;
+            left: 21px;
+            float: left;
+            margin-left: 0px;
+        }
+        
+        .tubiao {
+            width: 190px;
+            height: 132px;
+            background-size: 65%;
+            background-image: url(AA/guilin.png);
+            position: relative;
+            top: -94px;
+            left: 1181px;
+            background-repeat: no-repeat;
+        }
+        
+        #underline {
+            text-decoration: none;
+            /* 去掉a标签的下划线 */
+        }
+        
+        #demo {
+            width: 572px;
+            position: relative;
+            font-family: "楷体";
+            top: -534px;
+            left: -1160PX;
+            color: #e51b0c;
+            font-size: 40px;
+        }
+        
+        #zz {
+            text-decoration: none;
+            /* 去掉a标签的下划线 */
+            color: #ffffff;
+        }
+        
+        .PGN {
+            width: 50px;
+            height: 80px;
+            position: absolute;
+            background-image: url(AA/timg.gif);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            top: -539px;
+            left: -941px;
+            float: left;
+            /* border: 3px solid red; */
+        }
+    </style>
+    <script type="text/javascript">
+        alert('欢迎！');
+
+        function change() {
+            alert("很抱歉还没完善所有功能");
+        }
+        var myVar = setInterval(function() {
+            myTimer()
+        }, 1000); //1000毫秒的刷新率
+
+        function myTimer() {
+            var d = new Date(); //获取系统最新时间
+            var t = d.toLocaleTimeString();
+            document.getElementById("demo").innerHTML = t; //Date 对象的时间部分转换为字符串
+        }
+    </script>
+</head>
+
+<body>
+    <div class="AA">
+        <div class="BB"></div>
+        <div class="zhanghao"><input type="text" placeholder="手机号或邮箱" tyle="width:100px;" /> <br />
+            <input type="password" placeholder="密码" tyle="width:100px;" /></div>
+        <div class="zhuce">
+            <a class="kaozuo"> <a href="http://www.yiban.cn/user/reg/index?type=baseinfo" id="underline">注册</a> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</a>
+            <a href="https://www.yiban.cn/user/forget/index" id="underline">忘记密码?</a></div>
+    </div>
+    <div class="CC">
+        <div class="DD"> <a href="http://www.yiban.cn/square/index" id="zz">账号广场 </a>
+            <a href="https://mp.yiban.cn/login/index" id="zz">公共平台</a>
+            <a href="https://q.yiban.cn/" id="zz">应用快搭</a>
+            <a href="https://www.yiban.cn/login?go=http://app.yiban.cn" id="zz">应用广场</a>
+            <a href="https://www.yooc.me/" id="zz">优客YOOC</a>
+            <a href="https://ht.myjob500.com/yiban" id="zz"> 易智招聘</a> </div>
+        <div class="EE"></div>
+        <div class="FF"></div>
+        <div class="GG"></div>
+        </s><input type="submit" value="登录" id="denglu" onclick="change();" />
+
+    </div>
+
+    <div class="tubiao" title="嗨，你好！" </div>
+        <div>
+            <p id="demo"></p>
+        </div>
+        <div class="PGN"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>盒子父级定位和没定位的区别</title>
+	<style >
+		.AA{                     /*如果父级盒子没有定位（绝对、固定、相对定位），子级盒子则会以浏览器为准移动*/
+			width: 300px;
+			height: 400px;
+			background: red;
+			margin: 100px;    /*父级盒子外边距以浏览器为准偏移   位置单词不写则默认上偏移和左偏移100PX*/
+			
+
+
+			
+			
+		}
+		.BB{
+			width: 200px;
+			height: 100px;
+			background: black;
+			position: absolute;
+			top: 15px;
+			left: 15px; 
+			
+		}
+		.CC{					/*其他盒子会移动到上一个盒子的位置上*/
+			width: 100px;
+			height: 100px;
+			background-color: blue;  
+			
+		}
+		
+
+	</style>
+</head>
+<body>
+  <div class="AA">
+  	<div class="BB"></div>
+  	<div class="CC"></div>
+  </div>
+</body>
+</html>

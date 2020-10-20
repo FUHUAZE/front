@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>谷歌logo</title>
+	<style >
+		.c-blue{             /*类选择器的用法*/
+			color: blue;
+		}
+		.c-red{
+			color: red;
+		}
+		.c-orange{
+			color: orange;  
+		}
+		#c-green{            /* id选择器同样能实现类选择器的功能，但是一个网页只能调用一次*/
+			color: green;
+		}
+		span{
+			font-size:  75px;
+		}
+
+	</style>
+</head>
+<span class="c-blue" >G</span>      <!-- 引用类选择器名称的时候不要带“点.” -->
+<span class="c-red">o</span>
+<span class="c-orange">o</span>
+<span id="c-green">g</span>
+<span id="c-green">l</span>          <!-- 这是id选择的引用 不要带“#”，注意区分类选择器和ID选择器 -->
+<span class="c-red">e</span>
+
+<body>
+
+</body>
+</html>

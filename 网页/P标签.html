@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ <title></title>
+ <style>
+  div{
+  width: 100%;
+  height: 50px;
+  margin-bottom: 5px;
+  background: red;
+  }
+ </style>
+ </head>
+
+ <body>
+ 
+ <h2>毫秒的倒计时</h2>
+ <div id="timer1"></div>
+ <div id="timer2"></div>
+ <div id="timer3"></div>
+ <div id="timer4"></div>
+ <script>
+  var addTimer = function(){
+  var list = [],
+   interval;
+   
+  return function(id,timeStamp){
+   if(!interval){
+   interval = setInterval(go,1);
+   }
+   list.push({ele:document.getElementById(id),time:timeStamp});
+  }
+  
+  function go() { 
+   for (var i = 0; i < list.length; i++) { 
+   list[i].ele.innerHTML = changeTimeStamp(list[i].time); 
+   if (!list[i].time) 
+    list.splice(i--, 1); 
+   } 
+  }
+
+  //传入unix时间戳，得到倒计时
+  function changeTimeStamp(timeStamp){
+   var distancetime = new Date(timeStamp*1000).getTime() - new Date().getTime();
+   if(distancetime > 0){ 
+　　　　　　　　　　　　　　//如果大于0.说明尚未到达截止时间  
+   var ms = Math.floor(distancetime%1000);
+   var sec = Math.floor(distancetime/1000%60);
+   var min = Math.floor(distancetime/1000/60%60);
+   var hour =Math.floor(distancetime/1000/60/60%24);
+   
+   if(ms<100){
+    ms = "0"+ ms;
+   }
+   if(sec<10){
+    sec = "0"+ sec;
+   }
+   if(min<10){
+    min = "0"+ min;
+   }
+   if(hour<10){
+    hour = "0"+ hour;
+   }
+   
+   return hour + ":" +min + ":" +sec + ":" +ms;
+   }else{
+　　　　　　　　　　　　　　//若否，就是已经到截止时间了
+   return "已截止！"
+   } 
+  }  
+  }();
+  
+  addTimer("timer1",1451923200);//1月5日00点，unix时间戳自己去百度一下，就有的
+  addTimer("timer2",1451926800);//1月5日01点
+  addTimer("timer3",1451930400);//1月5日02点
+  addTimer("timer4",1452020400);//1月6日03点
+
+ </script>
+ 
+ </body>
+
+</html>

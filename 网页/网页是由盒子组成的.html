@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>网页是由盒子组成的</title>
+	<style >
+		.AA{
+			width: 300px;
+			height: 500px;
+			position: relative;
+			background-color: blue;
+			z-index: 2;
+			
+		}
+		.BB{
+			width: 165px;
+			height: 169px;
+			position: absolute;
+			background-color: white;
+			border-radius: 0px 0px 0px 0px;  /*  4个PX依次分别表示盒子的左上角，右上角，右下角，左下角。*/
+			transform: rotate(10deg);
+			top: 261px;
+			left: 2px;
+			z-index: -1;
+
+		}
+		/*.CC{
+			width: 50px;
+			height: 60px;
+			background-color: white;
+			position: absolute;
+			top: 120px;*/
+		
+
+		}
+		
+		
+	</style>
+</head>
+<body>
+  <div class="AA">
+  	<div class="BB"></div>
+  	<div class="CC"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>交集选择器的用法</title>
+	<style>
+		.red{
+			color: red;
+		}
+		span{
+			color: red;	
+		}
+	p.red{                  /*交集选择器，先选择标签，后选择属性，要记得顺序。*/
+		font-size: 50px;
+	}
+	</style>
+</head>
+<body>
+
+<span>AAA</span>
+<p class="red">BBB</p>     <!-- 如果此标签字体还想变大，再加个class很麻烦 -->
+<div>CCC</div>
+<p>DDD</p>
+</body>
+</html>

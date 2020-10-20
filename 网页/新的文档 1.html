@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>类选择器</title>
+	<link rel="stylesheet" type="text/css" href="样式表.css">  <!-- 引用名为样式表的ccs格式，目标为div标签-->
+	<style >
+		.fhz{
+			color: red;    /*定义一个类选择器，内含更改字体红色*/
+		}
+		p{
+			color: blue;     /*其他没有定义的，都显示为蓝色*/
+		}
+		.fh{
+			color: orange;   /*定义一个类选择器，内含更改字体橙色*/
+		}
+		.c-blue{             /*类选择器的用法*/
+			color: blue;
+		}
+		.c-red{
+			color: red;
+		}
+		.c-orange{
+			color: orange;  
+		}
+		#c-green{            /* id选择器同样能实现类选择器的功能，但是一个网页只能调用一次*/
+			color: green;
+		}
+		span{
+			font-size:  60px;
+
+		}
+
+	</style>
+</head>
+<body>
+  <p class="fhz" > 城阙辅三秦，风烟望五津</p>    <!-- 字体显示为红色 -->
+  <p> 与君离别意，同是宦游人</p> 
+  <p> 海内存知己，天涯若比邻</p> 
+  <p class="fh"> 君不见，黄河之水天上来，奔流到海不复回。</p>      <!-- 字体显示为橙色 -->
+  <p> 无为在歧路，儿女共沾巾</p>
+  <div>今天天气很不错，出太阳了！</div>
+  <b></b>
+  <span class="c-blue" >G</span>      <!-- 引用类选择器名称的时候不要带“点.” -->
+<span class="c-red">o</span>
+<span class="c-orange">o</span>
+<span id="c-green">g</span>
+<span id="c-green">l</span>          <!-- 这是id选择的引用 不要带“#”，注意区分类选择器和ID选择器 -->
+<span class="c-red">e</span>
+</body>
+</html>

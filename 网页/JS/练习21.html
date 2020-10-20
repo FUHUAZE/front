@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习2</title>
+    <script>
+        // var num = 10;
+        // var str = num.toString();      //注意S是大写
+        // console.log(str);
+        // console.log(typeof str);
+        // console.log(parseInt('0.32'));
+        // console.log(parseInt('9.32'));
+        // console.log(parseInt('20px'));  //注意I是大写
+        // console.log(Number('12.34'));  //  强制把字符型转换为数字型
+        //------计算用户年龄---------
+        // var a = prompt('请输入你的年龄');
+        // var b = 2018 -  a;   //减法有隐式转换，能把字符型转化为数字型。注：加法不能，加法是字符拼接。
+        // alert (b);
+        // -------简单加法器-----------
+        // var a = parseInt(prompt('请输入第一个值'));   //因为是加法，所以要把变量名由字符型转换为数字型。
+        // var b = parseInt(prompt('请输入第二个值'));   ////因为是加法，所以要把变量名由字符型转换为数字型。
+        // var c = a + b ;     //数字型a加上数字型b等于数字型c。
+        // alert(c);
+        // var d = parseInt(a)  + parseInt(b);     //另一种写法
+        // alert(d);
+        // parfl
+        let getRemainTime = (endTime, deviceTime, serverTime) => {
+            let t = endTime - Date.parse(new Date()) - serverTime + deviceTime
+            let seconds = Math.floor((t / 1000) % 60)
+            let minutes = Math.floor((t / 1000 / 60) % 60)
+            let hours = Math.floor((t / (1000 * 60 * 60)) % 24)
+            let days = Math.floor(t / (1000 * 60 * 60 * 24))
+            return {
+                'total': t,
+                'days': days,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

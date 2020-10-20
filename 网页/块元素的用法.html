@@ -1,0 +1,35 @@
+<!--   背景图片和插入图片的区别和用法 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>盒子外边距的用法
+	</title>
+	<style >
+		div{
+			width: 200px;
+			height: 200px;
+			background-color:  pink;
+			/*margin-top: 30px;   盒子上边与网页相隔30px像素。*/
+			margin-left: 50px ;   /*盒子左边与网页相隔30px像素。*/
+			 text-align: center;   /*文字在盒子内居中*/
+			 margin:30px  auto;      /*上下30像素，盒子居中*/
+			
+		}  
+		aside{
+			width: 400px;
+			height: 400px;
+			border: 1px solid purple;
+			background: #fff url(xxx.jpg) 0 0 no-repeat;   /*这个是背景图片*/
+			text-align: center;
+			background-size: 100%;  /*背景图片铺满整个盒子*/
+
+		}
+	</style>
+</head>
+<body>
+<div>文字水平居中</div>
+<aside>
+	啊啊啊啊啊啊啊啊啊啊啊
+</aside>
+</body>
+</html>

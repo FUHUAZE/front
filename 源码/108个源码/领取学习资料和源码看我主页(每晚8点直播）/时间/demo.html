@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间轮盘</title>
+    <script src="js/vue.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="home">
+        <div class="thetime">
+            <ul>
+                <li class="timeting">
+                    2019年
+                </li>
+            </ul>
+        </div>
+        <div id="second">
+            <ul>
+                <li v-for="second in seconds">
+                    {{ second.name }}
+                </li>
+            </ul>
+        </div>
+        <div id="minute">
+            <ul>
+                <li v-for="minute in minutes">
+                    {{ minute.name }}
+                </li>
+            </ul>
+        </div>
+        <div id="hour">
+            <ul>
+                <li v-for="hour in hours">
+                    {{ hour.name }}
+                </li>
+            </ul>
+        </div>
+        <div id="apm">
+            <ul>
+                <li v-for="apm in apms">
+                {{apm.name}}
+                </li>
+            </ul>
+        </div>
+        <div id="week">
+            <ul>
+                <li v-for="week in weeklist">
+                {{week.name}}
+                </li>
+            </ul>
+        </div>
+        <div id="day">
+            <ul>
+                <li v-for="day in days">
+                    {{day.name}}
+                </li>
+            </ul>
+        </div>
+        <div id="month">
+            <ul>
+                <li v-for="month in months">
+                    {{month.name}}
+                </li>
+            </ul>
+                
+        </div>
+    </div>
+
+</body>
+<script>
+    var demo = new Vue({
+            el:'#week',
+            data:{
+                weeklist: [
+                {
+                    name: '星期一',
+                    active:false
+                },{
+                    name: '星期二',
+                    active:false
+                },{
+                    name: '星期三',
+                    active:false
+                },{
+                    name: '星期四',
+                    active:false
+                },{
+                    name: '星期五',
+                    active:false
+                },{
+                    name: '星期六',
+                    active:false
+                },{
+                    name: '星期日',
+                    active:false
+                },{
+                    name: '',
+                    active:false
+                }
+                ]
+            },
+        });
+
+    var demo2 = new Vue({
+            el:'#month',
+            data:{
+                months: [
+                {
+                    name: '一月',
+                    active:false
+                },{
+                    name: '二月',
+                    active:false
+                },{
+                    name: '三月',
+                    active:false
+                },{
+                    name: '四月',
+                    active:false
+                },{
+                    name: '五月',
+                    active:false
+                },{
+                    name: '六月',
+                    active:false
+                },{
+                    name: '七月',
+                    active:false
+                },{
+                    name: '八月',
+                    active:false
+                },{
+                    name: '九月',
+                    active:false
+                },{
+                    name: '十月',
+                    active:false
+                },{
+                    name: '十一月',
+                    active:false
+                },{
+                    name: '十二月',
+                    active:false
+                }
+                ]
+            },
+        });
+    
+    var demo3 = new Vue({
+            el:'#second',
+            data:{
+                seconds: [
+                {
+                    name: '一秒',
+                    active:false
+                },{
+                    name: '二秒',
+                    active:false
+                },{
+                    name: '三秒',
+                    active:false
+                },{
+                    name: '四秒',
+                    active:false
+                },{
+                    name: '五秒',
+                    active:false
+                },{
+                    name: '六秒',
+                    active:false
+                },{
+                    name: '七秒',
+                    active:false
+                },{
+                    name: '八秒',
+                    active:false
+                },{
+                    name: '九秒',
+                    active:false
+                },{
+                    name: '十秒',
+                    active:false
+                },{
+                    name: '十一秒',
+                    active:false
+                },{
+                    name: '十二秒',
+                    active:false
+                },{
+                    name: '十三秒',
+                    active:false
+                },{
+                    name: '十四秒',
+                    active:false
+                },{
+                    name: '十五秒',
+                    active:false
+                },{
+                    name: '十六秒',
+                    active:false
+                },{
+                    name: '十七秒',
+                    active:false
+                },{
+                    name: '十八秒',
+                    active:false
+                },{
+                    name: '十九秒',
+                    active:false
+                },{
+                    name: '二十秒',
+                    active:false
+                },{
+                    name: '二十一秒',
+                    active:false
+                },{
+                    name: '二十二秒',
+                    active:false
+                },{
+                    name: '二十三秒',
+                    active:false
+                },{
+                    name: '二十四秒',
+                    active:false
+                },{
+                    name: '二十五秒',
+                    active:false
+                },{
+                    name: '二十六秒',
+                    active:false
+                },{
+                    name: '二十七秒',
+                    active:false
+                },{
+                    name: '二十八秒',
+                    active:false
+                },{
+                    name: '二十九秒',
+                    active:false
+                },{
+                    name: '三十秒',
+                    active:false
+                },{
+                    name: '三十一秒',
+                    active:false
+                },{
+                    name: '三十二秒',
+                    active:false
+                },{
+                    name: '三十三秒',
+                    active:false
+                },{
+                    name: '三十四秒',
+                    active:false
+                },{
+                    name: '三十五秒',
+                    active:false
+                },{
+                    name: '三十六秒',
+                    active:false
+                },{
+                    name: '三十七秒',
+                    active:false
+                },{
+                    name: '三十八秒',
+                    active:false
+                },{
+                    name: '三十九秒',
+                    active:false
+                },{
+                    name: '四十秒',
+                    active:false
+                },{
+                    name: '四十一秒',
+                    active:false
+                },{
+                    name: '四十二秒',
+                    active:false
+                },{
+                    name: '四十三秒',
+                    active:false
+                },{
+                    name: '四十四秒',
+                    active:false
+                },{
+                    name: '四十五秒',
+                    active:false
+                },{
+                    name: '四十六秒',
+                    active:false
+                },{
+                    name: '四十七秒',
+                    active:false
+                },{
+                    name: '四十八秒',
+                    active:false
+                },{
+                    name: '四十九秒',
+                    active:false
+                },{
+                    name: '五十秒',
+                    active:false
+                },{
+                    name: '五十一秒',
+                    active:false
+                },{
+                    name: '五十二秒',
+                    active:false
+                },{
+                    name: '五十三秒',
+                    active:false
+                },{
+                    name: '五十四秒',
+                    active:false
+                },{
+                    name: '五十五秒',
+                    active:false
+                },{
+                    name: '五十六秒',
+                    active:false
+                },{
+                    name: '五十七秒',
+                    active:false
+                },{
+                    name: '五十八秒',
+                    active:false
+                },{
+                    name: '五十九秒',
+                    active:false
+                },{
+                    name: '六十秒',
+                    active:false
+                }
+                ]
+            },
+        });
+
+    var demo5 = new Vue({
+        el:'#minute',
+        data:{
+            minutes: [
+            {
+                name: '一分',
+                active:false
+            },{
+                name: '二分',
+                active:false
+            },{
+                name: '三分',
+                active:false
+            },{
+                name: '四分',
+                active:false
+            },{
+                name: '五分',
+                active:false
+            },{
+                name: '六分',
+                active:false
+            },{
+                name: '七分',
+                active:false
+            },{
+                name: '八分',
+                active:false
+            },{
+                name: '九分',
+                active:false
+            },{
+                name: '十分',
+                active:false
+            },{
+                name: '十一分',
+                active:false
+            },{
+                name: '十二分',
+                active:false
+            },{
+                name: '十三分',
+                active:false
+            },{
+                name: '十四分',
+                active:false
+            },{
+                name: '十五分',
+                active:false
+            },{
+                name: '十六分',
+                active:false
+            },{
+                name: '十七分',
+                active:false
+            },{
+                name: '十八分',
+                active:false
+            },{
+                name: '十九分',
+                active:false
+            },{
+                name: '二十分',
+                active:false
+            },{
+                name: '二十一分',
+                active:false
+            },{
+                name: '二十二分',
+                active:false
+            },{
+                name: '二十三分',
+                active:false
+            },{
+                name: '二十四分',
+                active:false
+            },{
+                name: '二十五分',
+                active:false
+            },{
+                name: '二十六分',
+                active:false
+            },{
+                name: '二十七分',
+                active:false
+            },{
+                name: '二十八分',
+                active:false
+            },{
+                name: '二十九分',
+                active:false
+            },{
+                name: '三十分',
+                active:false
+            },{
+                name: '三十一分',
+                active:false
+            },{
+                name: '三十二分',
+                active:false
+            },{
+                name: '三十三分',
+                active:false
+            },{
+                name: '三十四分',
+                active:false
+            },{
+                name: '三十五分',
+                active:false
+            },{
+                name: '三十六分',
+                active:false
+            },{
+                name: '三十七分',
+                active:false
+            },{
+                name: '三十八分',
+                active:false
+            },{
+                name: '三十九分',
+                active:false
+            },{
+                name: '四十分',
+                active:false
+            },{
+                name: '四十一分',
+                active:false
+            },{
+                name: '四十二分',
+                active:false
+            },{
+                name: '四十三分',
+                active:false
+            },{
+                name: '四十四分',
+                active:false
+            },{
+                name: '四十五分',
+                active:false
+            },{
+                name: '四十六分',
+                active:false
+            },{
+                name: '四十七分',
+                active:false
+            },{
+                name: '四十八分',
+                active:false
+            },{
+                name: '四十九分',
+                active:false
+            },{
+                name: '五十分',
+                active:false
+            },{
+                name: '五十一分',
+                active:false
+            },{
+                name: '五十二分',
+                active:false
+            },{
+                name: '五十三分',
+                active:false
+            },{
+                name: '五十四分',
+                active:false
+            },{
+                name: '五十五分',
+                active:false
+            },{
+                name: '五十六分',
+                active:false
+            },{
+                name: '五十七分',
+                active:false
+            },{
+                name: '五十八分',
+                active:false
+            },{
+                name: '五十九分',
+                active:false
+            },{
+                name: '六十分',
+                active:false
+            }
+            ]
+        },
+    });
+
+    var demo6 = new Vue({
+        el:'#hour',
+        data:{
+            hours: [
+            {
+                name: '一点',
+                active:false
+            },{
+                name: '二点',
+                active:false
+            },{
+                name: '三点',
+                active:false
+            },{
+                name: '四点',
+                active:false
+            },{
+                name: '五点',
+                active:false
+            },{
+                name: '六点',
+                active:false
+            },{
+                name: '七点',
+                active:false
+            },{
+                name: '八点',
+                active:false
+            },{
+                name: '九点',
+                active:false
+            },{
+                name: '十点',
+                active:false
+            },{
+                name: '十一点',
+                active:false
+            },{
+                name: '十二点',
+                active:false
+            }
+            ]
+        },
+    });
+
+    var demo5 = new Vue({
+        el:'#day',
+        data:{
+            days: [
+            {
+                name: '一号',
+                active:false
+            },{
+                name: '二号',
+                active:false
+            },{
+                name: '三号',
+                active:false
+            },{
+                name: '四号',
+                active:false
+            },{
+                name: '五号',
+                active:false
+            },{
+                name: '六号',
+                active:false
+            },{
+                name: '七号',
+                active:false
+            },{
+                name: '八号',
+                active:false
+            },{
+                name: '九号',
+                active:false
+            },{
+                name: '十号',
+                active:false
+            },{
+                name: '十一号',
+                active:false
+            },{
+                name: '十二号',
+                active:false
+            },{
+                name: '十三号',
+                active:false
+            },{
+                name: '十四号',
+                active:false
+            },{
+                name: '十五号',
+                active:false
+            },{
+                name: '十六号',
+                active:false
+            },{
+                name: '十七号',
+                active:false
+            },{
+                name: '十八号',
+                active:false
+            },{
+                name: '十九号',
+                active:false
+            },{
+                name: '二十号',
+                active:false
+            },{
+                name: '二十一号',
+                active:false
+            },{
+                name: '二十二号',
+                active:false
+            },{
+                name: '二十三号',
+                active:false
+            },{
+                name: '二十四号',
+                active:false
+            },{
+                name: '二十五号',
+                active:false
+            },{
+                name: '二十六号',
+                active:false
+            },{
+                name: '二十七号',
+                active:false
+            },{
+                name: '二十八号',
+                active:false
+            },{
+                name: '二十九号',
+                active:false
+            },{
+                name: '三十号',
+                active:false
+            },{
+                name: '三十一号',
+                active:false
+            }
+            ]
+        },
+    });
+
+    var demo4 = new Vue({
+        el:'#apm',
+        data:{
+            apms: [
+            {
+                name: '上午',
+                active:false
+            },{
+                name: '下午',
+                active:false
+            }
+            ]
+        },
+    });
+
+    var ment1 = 0;
+    var ment2 = 0;
+    var oldsecond = 0;
+    function secondfun(){
+        var data = new Date();
+        var newsecond = data.getSeconds();
+        var m = newsecond-oldsecond;
+        if(m<0){
+            m = 1;
+        }
+        alldeg = (m)*(-6);
+        oldsecond = newsecond;
+        function someAnimation(args){
+            ment2 = ment1 + args;
+            document.getElementById("second").style.WebkitTransform="rotate("+ment2+"deg)";              
+        }
+        ment1 = ment2;
+        function donghua(){
+            for(var i=0;i<=10;i++){
+                setTimeout((function(pos){
+                    return function(){
+                        someAnimation(pos);
+                    }
+                })(i*alldeg/10),i*50)
+            }
+        }
+        var play = setInterval(donghua(),500);
+        clearInterval(play);
+        document.getElementById("second").style.WebkitTransform="rotate("+ment1+"deg)";
+        setTimeout("secondfun()",1000);
+    }
+    secondfun();
+
+    var ment3 = 0;
+    var ment4 = 0;
+    var oldminute = 0;
+    function minutefun(){
+        var data = new Date();
+        var newminute = data.getMinutes()-1;
+        var m = newminute-oldminute;
+        if(m<0){
+            m = 1;
+        }
+        alldeg = (m)*(-6);
+        oldminute = newminute;
+        function someAnimation(args){
+            ment4 = ment3 + args;
+            document.getElementById("minute").style.WebkitTransform="rotate("+ment4+"deg)";              
+        }
+        ment3 = ment4;
+        function donghua(){
+            for(var i=0;i<=10;i++){
+                setTimeout((function(pos){
+                    return function(){
+                        someAnimation(pos);
+                    }
+                })(i*alldeg/10),i*50)
+            }
+        }
+        var play = setInterval(donghua(),500);
+        clearInterval(play);
+        document.getElementById("minute").style.WebkitTransform="rotate("+ment3+"deg)";
+        setTimeout("minutefun()",1000);
+    }
+    minutefun();
+
+    var ment5 = 0;
+    var ment6 = 0;
+    var oldhour = 0;
+    function hourfun(){
+        var data = new Date();
+        var newhour = data.getHours()-1;
+        if(newhour>12){
+            document.getElementById("apm").style.WebkitTransform="rotate(180deg)";
+        }
+        var m = newhour-oldhour;
+        if(m<0){
+            m = 1;
+        }
+        alldeg = (m)*(-30);
+        oldhour = newhour;
+        function someAnimation(args){
+            ment6 = ment5 + args;
+            document.getElementById("hour").style.WebkitTransform="rotate("+ment6+"deg)";              
+        }
+        ment5 = ment6;
+        function donghua(){
+            for(var i=0;i<=10;i++){
+                setTimeout((function(pos){
+                    return function(){
+                        someAnimation(pos);
+                    }
+                })(i*alldeg/10),i*50)
+            }
+        }
+        var play = setInterval(donghua(),500);
+        clearInterval(play);
+        document.getElementById("hour").style.WebkitTransform="rotate("+ment5+"deg)";
+        setTimeout("hourfun()",1000);
+    }
+    hourfun();
+    
+    var ment7 = 0;
+    var ment8 = 0;
+    var oldmounth = 0;
+    function mounthfun(){
+        var data = new Date();
+        var newmounth = data.getMonth();
+        var m = newmounth-oldmounth;
+        if(m<0){
+            m = 1;
+        }
+        alldeg = (m)*(-30);
+        oldmounth = newmounth;
+        function someAnimation(args){
+            ment8 = ment7 + args;
+            document.getElementById("month").style.WebkitTransform="rotate("+ment8+"deg)";              
+        }
+        ment7 = ment8;
+        function donghua(){
+            for(var i=0;i<=10;i++){
+                setTimeout((function(pos){
+                    return function(){
+                        someAnimation(pos);
+                    }
+                })(i*alldeg/10),i*50)
+            }
+        }
+        var play = setInterval(donghua(),500);
+        clearInterval(play);
+        document.getElementById("month").style.WebkitTransform="rotate("+ment7+"deg)";
+        setTimeout("mounthfun()",1000);
+    }
+    mounthfun();
+
+    var ment9 = 0;
+    var ment10 = 0;
+    var oldweek = 0;
+    function weekfun(){
+        var data = new Date();
+        var newweek = data.getDay()-1;
+        var m = newweek-oldweek;
+        if(m<0){
+            m = 1;
+        }
+        alldeg = (m)*(-45);
+        oldweek = newweek;
+        function someAnimation(args){
+            ment10 = ment9 + args;
+            document.getElementById("week").style.WebkitTransform="rotate("+ment10+"deg)";              
+        }
+        ment9 = ment10;
+        function donghua(){
+            for(var i=0;i<=10;i++){
+                setTimeout((function(pos){
+                    return function(){
+                        someAnimation(pos);
+                    }
+                })(i*alldeg/10),i*50)
+            }
+        }
+        var play = setInterval(donghua(),500);
+        clearInterval(play);
+        document.getElementById("week").style.WebkitTransform="rotate("+ment9+"deg)";
+        setTimeout("weekfun()",1000);
+    }
+    weekfun();
+
+    var ment11 = 0;
+    var ment12 = 0;
+    var oldday = 0;
+    function dayfun(){
+        var data = new Date();
+        var newday = data.getDate()-1;
+        var m = newday-oldday;
+        if(m<0){
+            m = 1;
+        }
+        alldeg = (m)*(-11.25);
+        oldday = newday;
+        function someAnimation(args){
+            ment12 = ment11 + args;
+            document.getElementById("day").style.WebkitTransform="rotate("+ment12+"deg)";              
+        }
+        ment11 = ment12;
+        function donghua(){
+            for(var i=0;i<=10;i++){
+                setTimeout((function(pos){
+                    return function(){
+                        someAnimation(pos);
+                    }
+                })(i*alldeg/10),i*50)
+            }
+        }
+        var play = setInterval(donghua(),500);
+        clearInterval(play);
+        document.getElementById("day").style.WebkitTransform="rotate("+ment11+"deg)";
+        setTimeout("dayfun()",1000);
+    }
+    dayfun();
+    
+
+</script>
+</html>
